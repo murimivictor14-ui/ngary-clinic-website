@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ngary Comprehensive General Clinic & Medical Center</title>
+  <meta name="description" content="Compassionate, world-class primary healthcare led by Dr. Ngary, MD. Offering General Medicine, Pediatrics, Dental Care, Maternity & Women's Health, Rapid Laboratory Diagnostics, and 24/7 Walk-in Urgent Care.">
+  <meta name="keywords" content="Ngary clinic, medical center, Dr. Ngary, family doctor, pediatrics, dental care, maternity, lab tests, urgent care, Africa healthcare, appointment booking">
+  <meta property="og:title" content="Ngary Comprehensive General Clinic & Medical Center">
+  <meta property="og:description" content="Compassionate healthcare for your entire family. Book your doctor appointment online with instant confirmation.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230D9488'/><path d='M50 20 v60 M20 50 h60' stroke='white' stroke-width='16' stroke-linecap='round'/></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Emergency & Status Bar -->
+  <aside class="emergency-topbar" aria-label="Emergency and clinic status">
+    <div class="container">
+      <div class="emergency-status">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        <span><strong>Ngary General Clinic Open Today</strong> • Walk-in Urgent Care Wait: <span id="liveWaitTimeDisplay" style="color: #38BDF8; font-weight: 700;">12 mins</span></span>
+      </div>
+      <div class="emergency-actions">
+        <a href="tel:5559112273" class="emergency-phone">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>Emergency Desk: +1 (555) 911-CARE</span>
+        </a>
+        <div class="topbar-tools">
+          <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+            <span>🌙</span><span>Dark Mode</span>
+          </button>
+          <button id="audioToggleBtn" class="audio-toggle-btn" aria-label="Toggle Sound Effects">
+            <span>🔔</span><span>Sound On</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="#home" class="brand-logo">
+          <div class="brand-icon-wrapper" style="background: linear-gradient(135deg, #0D9488, #10B981);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M2 12h20"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">Ngary Clinic</span>
+            <span class="brand-subtitle">General Medical Center</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" id="siteNavLinks">
+          <li><a href="#about-founder" class="nav-link">About Dr. Ngary</a></li>
+          <li><a href="#services" class="nav-link">Basic Services</a></li>
+          <li><a href="#symptom-checker" class="nav-link">Symptom Checker</a></li>
+          <li><a href="#doctors" class="nav-link">Our Medical Team</a></li>
+          <li><a href="#diagnostics" class="nav-link">Lab & Pharmacy</a></li>
+          <li><a href="#insurance" class="nav-link">Insurance & Fees</a></li>
+          <li><a href="#contact" class="nav-link">Hours & Location</a></li>
+        </ul>
+
+        <div class="header-cta-group">
+          <button class="btn btn-outline" data-open-portal>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Patient Portal</span>
+          </button>
+          <button class="btn btn-primary btn-glow" data-open-booking>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Book Appointment</span>
+          </button>
+          <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Mobile Navigation">☰</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-pill" style="border-color: rgba(13, 148, 136, 0.4); background: rgba(13, 148, 136, 0.1);">
+            <span>🌿 Ministry of Health Certified</span>
+            <span>•</span>
+            <span>Same-Day Family Care</span>
+          </div>
+          <h1 class="hero-title">
+            Compassionate Healthcare for Your <span class="text-gradient">Entire Family</span>
+          </h1>
+          <p class="hero-desc">
+            Welcome to <strong>Ngary Comprehensive General Clinic</strong>, led by Chief Medical Officer <strong>Dr. Ngary, MD</strong>. We provide accessible, dignity-centered primary care, pediatrics, dental hygiene, maternity wellness, rapid laboratory diagnostics, and 24/7 walk-in urgent care.
+          </p>
+          <div class="hero-cta-actions">
+            <button class="btn btn-lg btn-primary btn-glow" data-open-booking>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Book Doctor Appointment</span>
+            </button>
+            <a href="#symptom-checker" class="btn btn-lg btn-outline">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              <span>Interactive Symptom Checker</span>
+            </a>
+          </div>
+
+          <div class="hero-trust-metrics">
+            <div class="metric-item">
+              <div class="metric-number">4.99★</div>
+              <div class="metric-label">Over 1,800+ Verified Patient Reviews</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">15 Min</div>
+              <div class="metric-label">Rapid Onsite Lab & Blood Test Turnaround</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">100%</div>
+              <div class="metric-label">Transparent Pricing & Direct Insurance Billing</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-container">
+          <div class="hero-image-frame" style="box-shadow: 0 20px 40px -10px rgba(13, 148, 136, 0.25);">
+            <img src="assets/images/african_clinic_hero.jpg" alt="Ngary General Medical Center Warm Reception and African Family Consultation" id="mainHeroLobbyImg">
+          </div>
+
+          <!-- Featured Spotlight: Dr. Ngary (Chief Medical Officer) -->
+          <div class="floating-card-status floating-card-1" style="bottom: -25px; left: -15px; max-width: 330px; border-left: 4px solid #0D9488;">
+            <div style="position: relative;">
+              <img src="assets/images/dr_ngary_chief_portrait.jpg" alt="Dr. Ngary, MD - Chief Medical Officer" id="doctorSpotlightAvatar" style="width: 58px; height: 58px; border-radius: 50%; object-fit: cover; border: 2.5px solid #0D9488;">
+              <span style="position: absolute; bottom: 0; right: 0; width: 14px; height: 14px; background: #10B981; border: 2px solid #FFFFFF; border-radius: 50%;"></span>
+            </div>
+            <div class="float-info" style="flex-grow: 1;">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <h4 style="margin: 0; font-size: 1.05rem;">Dr. Ngary, MD</h4>
+                <span style="font-size: 0.65rem; background: #0D9488; color: white; padding: 2px 6px; border-radius: 4px; font-weight: 700;">CHIEF M.O.</span>
+              </div>
+              <p style="font-size: 0.8rem; margin: 2px 0; color: var(--text-muted);">Medical Director & Family Health</p>
+              <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+                <span style="font-size: 0.75rem; color: #F59E0B; font-weight: 700;">⭐ 4.99 (840)</span>
+                <button id="toggleDoctorPhotoBtn" type="button" style="background: none; border: none; color: #0284C7; font-size: 0.72rem; cursor: pointer; text-decoration: underline; padding: 0;">
+                  🔄 View Casual Scrub
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Badge 2: Live Clinic Walk-in Status -->
+          <div class="floating-card-status floating-card-2" style="top: -15px; right: -15px;">
+            <div class="float-icon" style="background: #ECFDF5; color: #10B981;">⚡</div>
+            <div class="float-info">
+              <h4>Walk-In Triage Open</h4>
+              <p>Average wait time: 10 - 15 minutes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Appointment Search Bar -->
+  <div class="container quick-booking-bar-wrapper">
+    <div class="quick-booking-card">
+      <form id="heroQuickBookingForm" class="quick-booking-form">
+        <div class="input-group">
+          <label class="input-label" for="heroDeptSelect">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            Basic Clinic Service
+          </label>
+          <select id="heroDeptSelect" class="select-field">
+            <option value="general-medicine">General & Family Medicine ($35)</option>
+            <option value="pediatrics">Pediatrics & Child Wellness ($30)</option>
+            <option value="dental">Dentistry & Oral Hygiene ($40)</option>
+            <option value="maternity">Maternity & Women's Health ($45)</option>
+            <option value="diagnostics">Laboratory & Rapid Blood Tests ($25)</option>
+            <option value="urgent-care">24/7 Urgent Care & Minor Trauma ($35)</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="heroDoctorSelect">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Attending Physician
+          </label>
+          <select id="heroDoctorSelect" class="select-field">
+            <option value="">Any Available Doctor</option>
+            <option value="doc-ngary">Dr. Ngary, MD (Chief Medical Officer)</option>
+            <option value="doc-bello">Dr. Amina Bello, MD (Pediatrics)</option>
+            <option value="doc-mensah">Dr. Kwame Mensah, DDS (Dentistry)</option>
+            <option value="doc-njoroge">Dr. Zainab Njoroge, MD (Women's Health)</option>
+            <option value="doc-diallo">Dr. Emmanuel Diallo, MD (Diagnostics)</option>
+            <option value="nurse-mensah">Officer Kwesi Mensah, RN (Urgent Care)</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="heroQuickDate">Preferred Day</label>
+          <select id="heroQuickDate" class="select-field">
+            <option value="today">Today (Fast Walk-In)</option>
+            <option value="tomorrow">Tomorrow</option>
+            <option value="this-week">This Week</option>
+          </select>
+        </div>
+
+        <div class="quick-submit-col">
+          <button type="submit" class="btn btn-primary btn-block btn-glow">
+            Find Next Open Slot →
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- About Dr. Ngary & Our Clinic Mission -->
+  <section class="about-section" id="about-founder" style="padding: 5rem 0; background-color: var(--bg-card-subtle);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
+        <div>
+          <div style="position: relative; max-width: 440px; margin: 0 auto;">
+            <img src="assets/images/dr_ngary_chief_portrait.jpg" alt="Dr. Ngary, MD" id="founderBioPhoto" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl); border: 4px solid var(--bg-card); object-fit: cover;">
+            <div style="position: absolute; bottom: -20px; right: -15px; background: var(--bg-card); padding: 1rem 1.25rem; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); border-left: 4px solid #0D9488;">
+              <span style="font-size: 0.75rem; text-transform: uppercase; color: #0D9488; font-weight: 700; display: block;">Our Philosophy</span>
+              <strong style="font-size: 0.95rem; color: var(--text-main);">"Healing with Dignity & Heart"</strong>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <span class="section-tag">Leadership & Care Philosophy</span>
+          <h2 class="section-title">A Message from Dr. Ngary, MD</h2>
+          <p class="section-desc" style="margin-bottom: 1.25rem;">
+            <em>"Every mother, child, worker, and grandparent deserves immediate access to world-class medical attention without fear of crippling costs or disrespectful treatment. At Ngary Comprehensive General Clinic, we treat every patient like our own family."</em>
+          </p>
+          <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 1.5rem;">
+            Founded by <strong>Dr. Ngary</strong>, our clinic was established to bridge the gap between high-end modern clinical diagnostics and warm, accessible community healthcare. We combine experienced medical practitioners, an automated on-site pathology laboratory, and gentle bedside manners to give you peace of mind.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem;">
+            <div style="background: var(--bg-card); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+              <h4 style="color: #0D9488; font-size: 1rem; margin-bottom: 0.25rem;">✓ 100% In-House Care</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Consultation, lab testing, ultrasound & dispensary under one roof.</p>
+            </div>
+            <div style="background: var(--bg-card); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+              <h4 style="color: #0D9488; font-size: 1rem; margin-bottom: 0.25rem;">✓ Zero Financial Surprises</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Clear, transparent fee schedules and direct insurance claim billing.</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <button class="btn btn-primary" data-open-booking data-doctor-id="doc-ngary">
+              Schedule Consult with Dr. Ngary
+            </button>
+            <a href="#services" class="btn btn-outline">Explore Basic Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive Basic Services Section -->
+  <section class="specialties-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Essential Care</span>
+        <h2 class="section-title">Comprehensive Basic Clinic Services</h2>
+        <p class="section-desc">
+          Everything your family needs for daily wellness, disease prevention, acute recovery, and maternal care.
+        </p>
+      </div>
+
+      <div class="specialties-grid">
+        <!-- 1. General & Family Medicine -->
+        <article class="specialty-card">
+          <div class="specialty-icon-box" style="background: #E0F2FE; color: #0284C7;">🩺</div>
+          <h3>General & Family Medicine</h3>
+          <p class="specialty-desc">
+            Primary consultations for adults and elderly. Managing fevers, infections, hypertension, diabetes, and preventive checkups.
+          </p>
+          <ul class="specialty-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Comprehensive Physical Examination & Vitals</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Malaria, Typhoid & Tropical Disease Care</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Chronic Disease (Hypertension, Diabetes) Control</li>
+          </ul>
+          <div class="specialty-footer">
+            <div class="specialty-price">
+              <span class="price-sub">Lead: Dr. Ngary, MD</span>
+              <span class="price-val">$35 / or Copay</span>
+            </div>
+            <button class="btn btn-sm btn-outline-primary" data-open-booking data-department-id="general-medicine">
+              Book Consult
+            </button>
+          </div>
+        </article>
+
+        <!-- 2. Pediatrics & Child Wellness -->
+        <article class="specialty-card">
+          <div class="specialty-icon-box" style="background: #FEF3C7; color: #D97706;">🧸</div>
+          <h3>Pediatrics & Child Wellness</h3>
+          <p class="specialty-desc">
+            Gentle healthcare for infants, toddlers, and teenagers. Growth tracking, immunizations, and childhood fever treatment.
+          </p>
+          <ul class="specialty-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Routine Childhood Vaccines & Immunizations</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Pediatric Cough, Asthma & Diarrhea Care</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Newborn Milestone & Nutritional Evaluation</li>
+          </ul>
+          <div class="specialty-footer">
+            <div class="specialty-price">
+              <span class="price-sub">Lead: Dr. Amina Bello, MD</span>
+              <span class="price-val">$30 / or Copay</span>
+            </div>
+            <button class="btn btn-sm btn-outline-primary" data-open-booking data-department-id="pediatrics">
+              Book Consult
+            </button>
+          </div>
+        </article>
+
+        <!-- 3. Dentistry & Oral Health -->
+        <article class="specialty-card">
+          <div class="specialty-icon-box" style="background: #ECFDF5; color: #0D9488;">🦷</div>
+          <h3>Dentistry & Oral Health</h3>
+          <p class="specialty-desc">
+            Gentle dental checkups, pain relief, professional teeth cleaning (scaling and polishing), and painless extractions.
+          </p>
+          <ul class="specialty-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Ultrasonic Teeth Cleaning, Scaling & Polish</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Painless Tooth Extractions & Fillings</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Emergency Toothache & Gum Infection Relief</li>
+          </ul>
+          <div class="specialty-footer">
+            <div class="specialty-price">
+              <span class="price-sub">Lead: Dr. Kofi Mensah, DDS</span>
+              <span class="price-val">$40 / or Copay</span>
+            </div>
+            <button class="btn btn-sm btn-outline-primary" data-open-booking data-department-id="dental">
+              Book Consult
+            </button>
+          </div>
+        </article>
+
+        <!-- 4. Maternity & Women's Health (OB-GYN) -->
+        <article class="specialty-card">
+          <div class="specialty-icon-box" style="background: #FCE7F3; color: #DB2777;">🌸</div>
+          <h3>Maternity & Women's Health</h3>
+          <p class="specialty-desc">
+            Compassionate antenatal care, obstetric ultrasound, family planning, cervical screening, and postnatal maternal wellness.
+          </p>
+          <ul class="specialty-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Antenatal Program & Pregnancy Ultrasound</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Fetal Heart Monitoring & Maternal Blood Pressure</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Family Planning & Women's Preventive Health</li>
+          </ul>
+          <div class="specialty-footer">
+            <div class="specialty-price">
+              <span class="price-sub">Lead: Dr. Zainab Njoroge, MD</span>
+              <span class="price-val">$45 / or Copay</span>
+            </div>
+            <button class="btn btn-sm btn-outline-primary" data-open-booking data-department-id="maternity">
+              Book Consult
+            </button>
+          </div>
+        </article>
+
+        <!-- 5. Diagnostic Laboratory & Rapid Testing -->
+        <article class="specialty-card">
+          <div class="specialty-icon-box" style="background: #F3E8FF; color: #9333EA;">🔬</div>
+          <h3>Diagnostic Laboratory & Imaging</h3>
+          <p class="specialty-desc">
+            Certified automated blood tests, urinalysis, microscopy, and digital X-rays with fast 15-minute verified turnaround.
+          </p>
+          <ul class="specialty-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Rapid Malaria, Widal/Typhoid & Glucose Tests</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Automated Complete Blood Count (CBC)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Digital Chest Radiography (X-Ray) & Ultrasound</li>
+          </ul>
+          <div class="specialty-footer">
+            <div class="specialty-price">
+              <span class="price-sub">Lead: Dr. Emmanuel Diallo, MD</span>
+              <span class="price-val">$25 / or Copay</span>
+            </div>
+            <button class="btn btn-sm btn-outline-primary" data-open-booking data-department-id="diagnostics">
+              Book Test
+            </button>
+          </div>
+        </article>
+
+        <!-- 6. 24/7 Urgent Care & Minor Procedures -->
+        <article class="specialty-card">
+          <div class="specialty-icon-box" style="background: #FEE2E2; color: #DC2626;">⚡</div>
+          <h3>24/7 Urgent Care & Minor Trauma</h3>
+          <p class="specialty-desc">
+            Immediate walk-in assistance for cuts, burns, sprains, high fever, severe vomiting, and dehydration. No appointment needed.
+          </p>
+          <ul class="specialty-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Sterile Wound Cleaning, Dressing & Suturing</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> IV Fluid Rehydration & Medication Infusion</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Asthma Nebulizer Therapy & Oxygen Support</li>
+          </ul>
+          <div class="specialty-footer">
+            <div class="specialty-price">
+              <span class="price-sub">Lead: Officer Kwesi Mensah, RN</span>
+              <span class="price-val">$35 / Walk-in</span>
+            </div>
+            <button class="btn btn-sm btn-outline-primary" data-open-booking data-department-id="urgent-care">
+              View Walk-In
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Symptom Checker & Care Navigator -->
+  <section class="symptom-checker-section" id="symptom-checker">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive Clinical Triage</span>
+        <h2 class="section-title">Not Sure What Care You Need?</h2>
+        <p class="section-desc">
+          Click your symptom below. Our clinical navigator immediately identifies the right department and doctor for your care.
+        </p>
+      </div>
+
+      <div class="symptom-checker-card">
+        <h3 style="font-size: 1.15rem; margin-bottom: 1.25rem; color: var(--text-muted);">
+          Select Your Symptoms or Service Needed:
+        </h3>
+        <div class="symptom-tag-grid" id="symptomChipsList">
+          <!-- Populated dynamically by clinic-app.js -->
+        </div>
+
+        <div class="symptom-result-panel" id="symptomResultPanel">
+          <!-- Populated dynamically upon selecting a symptom -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctors & Faculty Directory -->
+  <section class="doctors-section" id="doctors">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Medical Team</span>
+        <h2 class="section-title">Meet Our Dedicated Physicians & Specialists</h2>
+        <p class="section-desc">
+          Led by Medical Director <strong>Dr. Ngary, MD</strong>, our compassionate team brings years of proven hospital experience to your community.
+        </p>
+      </div>
+
+      <!-- Specialty Filter Pills -->
+      <div class="filter-pills-bar">
+        <button class="filter-pill active" data-filter="all">All Medical Staff</button>
+        <button class="filter-pill" data-filter="general-medicine">General Medicine</button>
+        <button class="filter-pill" data-filter="pediatrics">Pediatrics</button>
+        <button class="filter-pill" data-filter="dental">Dentistry</button>
+        <button class="filter-pill" data-filter="maternity">Women's Health</button>
+        <button class="filter-pill" data-filter="diagnostics">Diagnostics & Lab</button>
+        <button class="filter-pill" data-filter="urgent-care">Urgent Care</button>
+      </div>
+
+      <!-- Doctor Cards Grid -->
+      <div class="doctors-grid">
+        <!-- 1. Dr. Ngary (Chief Medical Officer) -->
+        <article class="doctor-card" data-department="general-medicine" style="border: 2px solid #0D9488; position: relative;">
+          <div style="position: absolute; top: 12px; right: 12px; background: #0D9488; color: white; padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 800; z-index: 2;">
+            ★ CHIEF MEDICAL OFFICER
+          </div>
+          <div class="doctor-img-wrap">
+            <img src="assets/images/dr_ngary_chief_portrait.jpg" alt="Dr. Ngary, MD, Chief Physician">
+            <div class="doctor-rating-tag">⭐ 4.99 (840 reviews)</div>
+          </div>
+          <div class="doctor-info-box">
+            <span class="doctor-specialty-badge" style="background: #ECFDF5; color: #0D9488;">General & Family Medicine</span>
+            <h3 class="doctor-name">Dr. Ngary, MD</h3>
+            <p class="doctor-credentials">Chief Physician • Specialist in Family Medicine</p>
+            <div class="doctor-availability">
+              <span class="pulse-dot"></span> Next Slot: Today at 2:30 PM
+            </div>
+            <div class="doctor-actions">
+              <button class="btn btn-sm btn-outline" data-view-doctor data-doctor-id="doc-ngary">View Bio</button>
+              <button class="btn btn-sm btn-primary" data-open-booking data-doctor-id="doc-ngary">Book with Dr. Ngary</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Dr. Amina Bello -->
+        <article class="doctor-card" data-department="pediatrics">
+          <div class="doctor-img-wrap">
+            <img src="assets/images/doctor_amina_bello.jpg" alt="Dr. Amina Bello, Senior Pediatrician">
+            <div class="doctor-rating-tag">⭐ 4.97 (520 reviews)</div>
+          </div>
+          <div class="doctor-info-box">
+            <span class="doctor-specialty-badge" style="background: #FEF3C7; color: #D97706;">Pediatrics & Child Wellness</span>
+            <h3 class="doctor-name">Dr. Amina Bello</h3>
+            <p class="doctor-credentials">MD, FAAP • Senior Pediatrician</p>
+            <div class="doctor-availability">
+              <span class="pulse-dot"></span> Next Slot: Today at 3:15 PM
+            </div>
+            <div class="doctor-actions">
+              <button class="btn btn-sm btn-outline" data-view-doctor data-doctor-id="doc-bello">View Bio</button>
+              <button class="btn btn-sm btn-primary" data-open-booking data-doctor-id="doc-bello">Book Appointment</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Dr. Kwame Mensah -->
+        <article class="doctor-card" data-department="dental">
+          <div class="doctor-img-wrap">
+            <img src="assets/images/doctor_mensah_portrait.jpg" alt="Dr. Kwame Mensah, Dental Surgeon">
+            <div class="doctor-rating-tag">⭐ 4.96 (430 reviews)</div>
+          </div>
+          <div class="doctor-info-box">
+            <span class="doctor-specialty-badge" style="background: #ECFDF5; color: #0D9488;">Dentistry & Oral Health</span>
+            <h3 class="doctor-name">Dr. Kwame Mensah</h3>
+            <p class="doctor-credentials">DDS, MS • Specialist in Painless Oral Care</p>
+            <div class="doctor-availability">
+              <span class="pulse-dot"></span> Next Slot: Tomorrow at 9:30 AM
+            </div>
+            <div class="doctor-actions">
+              <button class="btn btn-sm btn-outline" data-view-doctor data-doctor-id="doc-mensah">View Bio</button>
+              <button class="btn btn-sm btn-primary" data-open-booking data-doctor-id="doc-mensah">Book Appointment</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Dr. Zainab Njoroge -->
+        <article class="doctor-card" data-department="maternity">
+          <div class="doctor-img-wrap">
+            <img src="assets/images/doctor_zainab_njoroge.jpg" alt="Dr. Zainab Njoroge, OB-GYN">
+            <div class="doctor-rating-tag">⭐ 4.98 (610 reviews)</div>
+          </div>
+          <div class="doctor-info-box">
+            <span class="doctor-specialty-badge" style="background: #FCE7F3; color: #DB2777;">Women's Health (OB-GYN)</span>
+            <h3 class="doctor-name">Dr. Zainab Njoroge</h3>
+            <p class="doctor-credentials">MD, FWACS • Maternal Care Specialist</p>
+            <div class="doctor-availability">
+              <span class="pulse-dot"></span> Next Slot: Today at 4:00 PM
+            </div>
+            <div class="doctor-actions">
+              <button class="btn btn-sm btn-outline" data-view-doctor data-doctor-id="doc-njoroge">View Bio</button>
+              <button class="btn btn-sm btn-primary" data-open-booking data-doctor-id="doc-njoroge">Book Appointment</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Dr. Emmanuel Diallo -->
+        <article class="doctor-card" data-department="diagnostics">
+          <div class="doctor-img-wrap">
+            <img src="assets/images/doctor_emmanuel_diallo.jpg" alt="Dr. Emmanuel Diallo, Clinical Pathologist">
+            <div class="doctor-rating-tag">⭐ 4.95 (380 reviews)</div>
+          </div>
+          <div class="doctor-info-box">
+            <span class="doctor-specialty-badge" style="background: #F3E8FF; color: #9333EA;">Diagnostics & Lab Pathology</span>
+            <h3 class="doctor-name">Dr. Emmanuel Diallo</h3>
+            <p class="doctor-credentials">MD, MSc • Senior Clinical Pathologist</p>
+            <div class="doctor-availability">
+              <span class="pulse-dot"></span> Next Slot: Today at 1:45 PM
+            </div>
+            <div class="doctor-actions">
+              <button class="btn btn-sm btn-outline" data-view-doctor data-doctor-id="doc-diallo">View Bio</button>
+              <button class="btn btn-sm btn-primary" data-open-booking data-doctor-id="doc-diallo">Book Test</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. Officer Kwesi Mensah -->
+        <article class="doctor-card" data-department="urgent-care">
+          <div class="doctor-img-wrap">
+            <img src="assets/images/doctor_kofi_mensah.jpg" alt="Officer Kwesi Mensah, Urgent Care & Triage Director">
+            <div class="doctor-rating-tag">⭐ 4.99 (720 reviews)</div>
+          </div>
+          <div class="doctor-info-box">
+            <span class="doctor-specialty-badge" style="background: #FEE2E2; color: #DC2626;">Urgent Care & Triage</span>
+            <h3 class="doctor-name">Officer Kwesi Mensah</h3>
+            <p class="doctor-credentials">RN, BSN • Certified Emergency & Primary Care Nurse</p>
+            <div class="doctor-availability">
+              <span class="pulse-dot"></span> Walk-In Open 24/7
+            </div>
+            <div class="doctor-actions">
+              <button class="btn btn-sm btn-outline" data-view-doctor data-doctor-id="nurse-mensah">View Bio</button>
+              <button class="btn btn-sm btn-primary" data-open-booking data-department-id="urgent-care" data-doctor-id="nurse-mensah">Walk-In Triage</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Laboratory, Diagnostics & Pharmacy Showcase -->
+  <section class="diagnostics-feature-section" id="diagnostics">
+    <div class="container">
+      <div class="diagnostics-grid">
+        <div>
+          <span class="section-tag">On-Site Facilities</span>
+          <h2 class="section-title">Automated Diagnostics Lab & Pharmacy</h2>
+          <p class="section-desc">
+            No waiting days for outside lab referrals. Our on-site certified laboratory delivers rapid malaria tests, complete blood counts, and pregnancy scans in 15–30 minutes, supported by a fully stocked dispensary.
+          </p>
+
+          <div class="tech-checklist">
+            <div class="tech-item">
+              <div class="tech-icon">🔬</div>
+              <div>
+                <h4>15-Minute Rapid Bloodwork & Malaria Panels</h4>
+                <p>Capillary blood tests for malaria parasites, typhoid Widal reaction, blood glucose, and full urinalysis with immediate physician review.</p>
+              </div>
+            </div>
+
+            <div class="tech-item">
+              <div class="tech-icon">📷</div>
+              <div>
+                <h4>Obstetric & Abdominal Ultrasound</h4>
+                <p>High-resolution real-time sonography for prenatal fetal health, maternal checkups, liver, kidney, and pelvic examinations.</p>
+              </div>
+            </div>
+
+            <div class="tech-item">
+              <div class="tech-icon">💊</div>
+              <div>
+                <h4>Fully Certified Dispensary & On-Site Pharmacy</h4>
+                <p>100% verified, genuine medications, pediatric syrups, oral rehydration salts, antibiotics, and chronic prescriptions at affordable subsidized prices.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="hero-image-frame" style="box-shadow: var(--shadow-xl);">
+            <img src="assets/images/clinic_facility_modern.jpg" alt="Ngary General Medical Center Examination & Consultation Suite">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insurance & Transparent Price List -->
+  <section class="insurance-section" id="insurance">
+    <div class="container">
+      <div class="insurance-box">
+        <span class="section-tag">Financial Peace of Mind</span>
+        <h2 class="section-title">Direct Insurance Billing & Transparent Fees</h2>
+        <p class="section-desc" style="max-width: 640px; margin: 0 auto 1.5rem;">
+          We believe quality healthcare should be completely transparent. Select your insurance provider below to view coverage details:
+        </p>
+
+        <div style="max-width: 520px; margin: 0 auto 2.5rem;">
+          <select id="insuranceCheckerSelect" class="select-field" style="font-size: 1rem; padding: 0.85rem 1rem;">
+            <option value="">-- Select Your Insurance Scheme --</option>
+            <option value="National Health Insurance (NHIF / SHIF)">National Health Insurance (NHIF / SHIF)</option>
+            <option value="Jubilee Health Insurance">Jubilee Health Insurance</option>
+            <option value="AXA Mansard Health">AXA Mansard Health</option>
+            <option value="Sanlam Healthcare">Sanlam Healthcare</option>
+            <option value="Old Mutual Health">Old Mutual Health</option>
+            <option value="Cigna Global Health">Cigna Global Health (International)</option>
+            <option value="Bupa Global / International">Bupa Global / International</option>
+            <option value="Hygeia HMO">Hygeia HMO</option>
+            <option value="Reliance HMO">Reliance HMO</option>
+            <option value="Community Sliding Scale / Self-Pay">Community Sliding Scale / Self-Pay</option>
+          </select>
+
+          <div id="insuranceResultBox"></div>
+        </div>
+
+        <!-- Transparent Price Table -->
+        <h3 style="font-size: 1.25rem; margin-bottom: 1.25rem; text-align: center;">Standard Outpatient Fee Schedule</h3>
+        <div style="overflow-x: auto; max-width: 800px; margin: 0 auto 2rem; background: var(--bg-card); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border-subtle);">
+          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+            <thead>
+              <tr style="background: var(--bg-card-subtle); border-bottom: 1px solid var(--border-subtle);">
+                <th style="padding: 0.85rem 1.25rem;">Service Description</th>
+                <th style="padding: 0.85rem 1.25rem;">Physician / Department</th>
+                <th style="padding: 0.85rem 1.25rem;">Standard Fee</th>
+                <th style="padding: 0.85rem 1.25rem;">Insurance Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 0.85rem 1.25rem;"><strong>General Outpatient Consultation</strong></td>
+                <td style="padding: 0.85rem 1.25rem;">Dr. Ngary, MD</td>
+                <td style="padding: 0.85rem 1.25rem; color: #0D9488; font-weight: 700;">$35</td>
+                <td style="padding: 0.85rem 1.25rem;"><span class="status-badge status-optimal">100% In-Network</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 0.85rem 1.25rem;"><strong>Pediatric Exam & Vaccination Check</strong></td>
+                <td style="padding: 0.85rem 1.25rem;">Dr. Amina Bello, MD</td>
+                <td style="padding: 0.85rem 1.25rem; color: #0D9488; font-weight: 700;">$30</td>
+                <td style="padding: 0.85rem 1.25rem;"><span class="status-badge status-optimal">100% In-Network</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 0.85rem 1.25rem;"><strong>Dental Examination & Cleaning</strong></td>
+                <td style="padding: 0.85rem 1.25rem;">Dr. Kofi Mensah, DDS</td>
+                <td style="padding: 0.85rem 1.25rem; color: #0D9488; font-weight: 700;">$40</td>
+                <td style="padding: 0.85rem 1.25rem;"><span class="status-badge status-optimal">Covered</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 0.85rem 1.25rem;"><strong>Antenatal Care & Ultrasound Scan</strong></td>
+                <td style="padding: 0.85rem 1.25rem;">Dr. Zainab Njoroge, MD</td>
+                <td style="padding: 0.85rem 1.25rem; color: #0D9488; font-weight: 700;">$45</td>
+                <td style="padding: 0.85rem 1.25rem;"><span class="status-badge status-optimal">Covered</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 0.85rem 1.25rem;"><strong>Rapid Malaria & Typhoid Blood Panel</strong></td>
+                <td style="padding: 0.85rem 1.25rem;">Diagnostic Lab Team</td>
+                <td style="padding: 0.85rem 1.25rem; color: #0D9488; font-weight: 700;">$18</td>
+                <td style="padding: 0.85rem 1.25rem;"><span class="status-badge status-optimal">Direct Billing</span></td>
+              </tr>
+              <tr>
+                <td style="padding: 0.85rem 1.25rem;"><strong>Wound Cleaning & Sterile Suturing</strong></td>
+                <td style="padding: 0.85rem 1.25rem;">Urgent Care Unit</td>
+                <td style="padding: 0.85rem 1.25rem; color: #0D9488; font-weight: 700;">$30</td>
+                <td style="padding: 0.85rem 1.25rem;"><span class="status-badge status-optimal">Emergency Covered</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="insurance-logos-grid">
+          <span class="ins-badge">NHIF / SHIF Scheme</span>
+          <span class="ins-badge">Jubilee Health</span>
+          <span class="ins-badge">AXA Mansard</span>
+          <span class="ins-badge">Sanlam</span>
+          <span class="ins-badge">Old Mutual</span>
+          <span class="ins-badge">Cigna Global</span>
+          <span class="ins-badge">Bupa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact, Hours & Clinic Location -->
+  <section class="specialties-section" id="contact" style="background-color: var(--bg-card-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Visit Our Clinic</span>
+        <h2 class="section-title">Convenient Hours & Central Location</h2>
+        <p class="section-desc">
+          Located on Unity Boulevard with dedicated ambulance drop-off, free patient parking, and step-free wheelchair accessibility.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+        <!-- Card 1: Operating Hours -->
+        <div class="specialty-card">
+          <div class="specialty-icon-box" style="background: #E0F2FE; color: #0284C7;">🕒</div>
+          <h3>Clinical Working Hours</h3>
+          <p class="text-muted" style="margin-bottom: 1.25rem;">Consultations with Dr. Ngary and medical staff.</p>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.925rem;">
+            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem;">
+              <span>Monday – Saturday</span>
+              <strong>7:30 AM – 8:30 PM</strong>
+            </li>
+            <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem;">
+              <span>Sunday (Routine Clinics)</span>
+              <strong>8:30 AM – 4:00 PM</strong>
+            </li>
+            <li style="display: flex; justify-content: space-between; padding-top: 0.25rem; color: #DC2626; font-weight: 700;">
+              <span>24/7 Urgent Care & Triage</span>
+              <span>Open 24 Hours / Everyday</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Contact & Direct Hotline -->
+        <div class="specialty-card">
+          <div class="specialty-icon-box" style="background: #ECFDF5; color: #0D9488;">📍</div>
+          <h3>Address & Telephone</h3>
+          <p class="text-muted" style="margin-bottom: 1rem;">
+            88 Unity Boulevard, Medical District, Suite 100<br>Central City, Near Civic Plaza
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1.25rem;">
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); display: block;">Reception & Appointment Inquiries</span>
+              <a href="tel:5552482273" style="font-weight: 700; color: #0D9488; font-size: 1.05rem;">+1 (555) 248-CARE (2273)</a>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); display: block;">24/7 Emergency Triage Hotline</span>
+              <a href="tel:5559112273" style="font-weight: 700; color: #DC2626; font-size: 1.05rem;">+1 (555) 911-CARE</a>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); display: block;">Official Clinic Email</span>
+              <a href="mailto:care@ngaryclinic.com" style="color: var(--text-main); font-weight: 600;">care@ngaryclinic.com</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Patient Amenities & Parking -->
+        <div class="specialty-card">
+          <div class="specialty-icon-box" style="background: #FEF3C7; color: #D97706;">🏥</div>
+          <h3>Patient Amenities</h3>
+          <ul class="specialty-features" style="margin-top: 0.75rem;">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Free Patient Parking & Direct Taxi Access</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Wheelchair Accessible Entrances & Examination Beds</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Air-Conditioned Waiting Lounge & Free Wi-Fi</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> On-Site Pharmacy for Immediate Medication</li>
+          </ul>
+          <div style="margin-top: auto;">
+            <button class="btn btn-outline-primary" style="width: 100%;" data-open-booking>
+              Book an Appointment with Dr. Ngary
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1.25rem;">
+            <div class="brand-icon-wrapper" style="background: linear-gradient(135deg, #0D9488, #10B981);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M2 12h20"/></svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title" style="color: #FFFFFF;">Ngary Clinic</span>
+              <span class="brand-subtitle" style="color: #38BDF8;">Comprehensive General Center</span>
+            </div>
+          </div>
+          <p style="font-size: 0.875rem; line-height: 1.6; margin-bottom: 1.25rem;">
+            Ngary Comprehensive General Clinic & Medical Center is committed to providing dignity, precision, and heartfelt primary healthcare to all individuals and families.
+          </p>
+          <p style="font-size: 0.775rem; color: #64748B;">
+            Ministry of Health Certified • ISO 9001:2015 Quality Management • African Healthcare Excellence
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Clinical Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">General & Family Medicine</a></li>
+            <li><a href="#services">Pediatrics & Immunizations</a></li>
+            <li><a href="#services">Dentistry & Oral Hygiene</a></li>
+            <li><a href="#services">Maternity & Women's Health</a></li>
+            <li><a href="#services">Rapid Diagnostic Bloodwork</a></li>
+            <li><a href="#services">24/7 Walk-In Urgent Care</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Patient Resources</h4>
+          <ul class="footer-links">
+            <li><a href="#" data-open-portal>Patient Portal (Lab Reports & Refills)</a></li>
+            <li><a href="#symptom-checker">Symptom Checker & Triage</a></li>
+            <li><a href="#insurance">Insurance & Transparent Fees</a></li>
+            <li><a href="#" data-open-booking>Book Online Appointment</a></li>
+            <li><a href="#about-founder">About Dr. Ngary, MD</a></li>
+            <li><a href="#contact">Emergency Care & Hotline</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Emergency & Urgent Care</h4>
+          <div style="background: rgba(255, 255, 255, 0.05); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(255, 255, 255, 0.1);">
+            <p style="font-size: 0.825rem; color: #CBD5E1; margin-bottom: 0.75rem;">
+              For sudden severe breathlessness, high unyielding fevers in infants, deep cuts, or acute trauma, our urgent desk is open 24 hours every day.
+            </p>
+            <a href="tel:5559112273" class="btn btn-sm btn-primary" style="width: 100%; background: #DC2626; border-color: #DC2626;">
+              📞 Call Emergency: +1 (555) 911-CARE
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ngary Comprehensive General Clinic & Medical Center. All rights reserved.</p>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#">Patient Privacy Rights</a>
+          <a href="#">Terms of Care</a>
+          <a href="#">Patient Charter of Dignity</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALS
+       ========================================================================= -->
+
+  <!-- 1. Interactive Multi-Step Appointment Booking Modal -->
+  <div class="modal-overlay" id="bookingModalOverlay" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 0.75rem; font-weight: 700; color: #0D9488; text-transform: uppercase;">Direct Online Booking</span>
+          <h3 id="bookingModalTitle">Schedule a Clinic Appointment</h3>
+        </div>
+        <button class="modal-close-btn" id="closeBookingModalBtn" aria-label="Close Booking Modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Stepper Navigation -->
+        <div class="booking-stepper">
+          <div class="stepper-step active" id="stepper1">
+            <div class="step-circle">1</div>
+            <span class="step-label">Service</span>
+          </div>
+          <div class="stepper-step" id="stepper2">
+            <div class="step-circle">2</div>
+            <span class="step-label">Doctor</span>
+          </div>
+          <div class="stepper-step" id="stepper3">
+            <div class="step-circle">3</div>
+            <span class="step-label">Date & Time</span>
+          </div>
+          <div class="stepper-step" id="stepper4">
+            <div class="step-circle">4</div>
+            <span class="step-label">Patient Info</span>
+          </div>
+          <div class="stepper-step" id="stepper5">
+            <div class="step-circle">5</div>
+            <span class="step-label">Pass</span>
+          </div>
+        </div>
+
+        <!-- Step 1: Service Selection -->
+        <div class="booking-step-content active" id="bookingStep1">
+          <h4 style="margin-bottom: 1.25rem;">Select Clinic Service:</h4>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+            <label class="select-option-box">
+              <input type="radio" name="bookingDept" value="general-medicine" checked>
+              <div class="option-card-inner">
+                <span class="opt-icon">🩺</span>
+                <strong>General Medicine</strong>
+                <span class="opt-fee">$35 Consult (Dr. Ngary)</span>
+              </div>
+            </label>
+            <label class="select-option-box">
+              <input type="radio" name="bookingDept" value="pediatrics">
+              <div class="option-card-inner">
+                <span class="opt-icon">🧸</span>
+                <strong>Pediatrics & Child</strong>
+                <span class="opt-fee">$30 Pediatric Visit</span>
+              </div>
+            </label>
+            <label class="select-option-box">
+              <input type="radio" name="bookingDept" value="dental">
+              <div class="option-card-inner">
+                <span class="opt-icon">🦷</span>
+                <strong>Dentistry & Oral Care</strong>
+                <span class="opt-fee">$40 Dental Exam & Clean</span>
+              </div>
+            </label>
+            <label class="select-option-box">
+              <input type="radio" name="bookingDept" value="maternity">
+              <div class="option-card-inner">
+                <span class="opt-icon">🌸</span>
+                <strong>Maternity & Women's Health</strong>
+                <span class="opt-fee">$45 Antenatal & Scan</span>
+              </div>
+            </label>
+            <label class="select-option-box">
+              <input type="radio" name="bookingDept" value="diagnostics">
+              <div class="option-card-inner">
+                <span class="opt-icon">🔬</span>
+                <strong>Diagnostics & Lab</strong>
+                <span class="opt-fee">$25 Blood Panel</span>
+              </div>
+            </label>
+            <label class="select-option-box">
+              <input type="radio" name="bookingDept" value="urgent-care">
+              <div class="option-card-inner">
+                <span class="opt-icon">⚡</span>
+                <strong>24/7 Urgent Care</strong>
+                <span class="opt-fee">$35 Immediate Triage</span>
+              </div>
+            </label>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end;">
+            <button class="btn btn-primary" id="nextToStep2">Continue to Select Doctor →</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Doctor Selection -->
+        <div class="booking-step-content" id="bookingStep2">
+          <h4 style="margin-bottom: 1.25rem;">Choose Your Physician:</h4>
+          <div id="doctorSelectionList" style="display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 2rem;">
+            <!-- Dynamically populated from CLINIC_DATA.doctors -->
+          </div>
+
+          <div style="display: flex; justify-content: space-between;">
+            <button class="btn btn-outline" id="backToStep1">← Back</button>
+            <button class="btn btn-primary" id="nextToStep3">Choose Date & Time →</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Date & Time Selection -->
+        <div class="booking-step-content" id="bookingStep3">
+          <h4 style="margin-bottom: 0.5rem;">Select Appointment Date & Time:</h4>
+          <p class="text-muted" style="font-size: 0.875rem; margin-bottom: 1.25rem;">
+            Booking with: <strong class="summary-doc-name">Physician</strong> (<span class="summary-doc-dept">Specialty</span>)
+          </p>
+
+          <label class="input-label" style="margin-bottom: 0.65rem;">Select Day:</label>
+          <div id="bookingDatePicker" style="display: flex; gap: 0.75rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">
+            <!-- Dates generated by script -->
+          </div>
+
+          <label class="input-label" style="margin-bottom: 0.65rem;">Available Time Slots:</label>
+          <div class="slots-grid" id="bookingSlotsGrid" style="margin-bottom: 2rem;">
+            <!-- Slots generated by script -->
+          </div>
+
+          <div style="display: flex; justify-content: space-between;">
+            <button class="btn btn-outline" id="backToStep2">← Back</button>
+            <button class="btn btn-primary" id="nextToStep4">Continue to Patient Details →</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Patient Info Form -->
+        <div class="booking-step-content" id="bookingStep4">
+          <h4 style="margin-bottom: 1.25rem;">Patient Contact & Insurance Information:</h4>
+          
+          <form id="bookingPatientForm">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+              <div class="input-group">
+                <label class="input-label" for="patientFullName">Full Legal Name *</label>
+                <input type="text" id="patientFullName" class="input-field" required placeholder="e.g. Kwame Mensah" value="Kwame Mensah">
+              </div>
+              <div class="input-group">
+                <label class="input-label" for="patientDob">Date of Birth *</label>
+                <input type="date" id="patientDob" class="input-field" required value="1988-05-14">
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+              <div class="input-group">
+                <label class="input-label" for="patientEmail">Email Address (For Confirmation Pass) *</label>
+                <input type="email" id="patientEmail" class="input-field" required placeholder="kwame.m@example.com" value="kwame.m@example.com">
+              </div>
+              <div class="input-group">
+                <label class="input-label" for="patientPhone">Mobile Phone (For SMS Reminders) *</label>
+                <input type="tel" id="patientPhone" class="input-field" required placeholder="+1 (555) 000-0000" value="+1 (555) 749-1029">
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+              <div class="input-group">
+                <label class="input-label" for="patientInsurance">Insurance Scheme</label>
+                <select id="patientInsurance" class="select-field">
+                  <option value="National Health Insurance (NHIF / SHIF)">National Health Insurance (NHIF / SHIF)</option>
+                  <option value="Jubilee Health Insurance">Jubilee Health Insurance</option>
+                  <option value="AXA Mansard Health">AXA Mansard Health</option>
+                  <option value="Sanlam Healthcare">Sanlam Healthcare</option>
+                  <option value="Old Mutual Health">Old Mutual Health</option>
+                  <option value="Cigna Global Health">Cigna Global Health</option>
+                  <option value="Bupa Global">Bupa Global</option>
+                  <option value="Community Sliding Scale / Self-Pay">Community Sliding Scale / Self-Pay</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label class="input-label" for="patientReason">Primary Reason for Visit *</label>
+                <input type="text" id="patientReason" class="input-field" required placeholder="e.g. General checkup, malaria screening" value="Routine Family Medical Checkup">
+              </div>
+            </div>
+
+            <div style="background-color: var(--bg-card-subtle); padding: 1.15rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); margin-bottom: 1.75rem;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.35rem;">
+                <span class="text-muted" style="font-size: 0.85rem;">Doctor:</span>
+                <strong class="summary-doc-name" style="font-size: 0.85rem;">Dr. Ngary, MD</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.35rem;">
+                <span class="text-muted" style="font-size: 0.85rem;">Date & Time:</span>
+                <strong class="summary-datetime" style="font-size: 0.85rem;">Today</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span class="text-muted" style="font-size: 0.85rem;">Consultation Fee:</span>
+                <strong class="summary-fee" style="color: #0D9488; font-size: 0.95rem;">$35</strong>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between;">
+              <button type="button" class="btn btn-outline" id="backToStep3">← Back</button>
+              <button type="submit" class="btn btn-primary btn-glow">
+                Confirm & Issue Digital Clinic Pass ✨
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Step 5: Digital Appointment Pass & Confirmation -->
+        <div class="booking-step-content" id="bookingStep5">
+          <div style="text-align: center; margin-bottom: 1.5rem;">
+            <div style="width: 56px; height: 56px; background-color: #ECFDF5; color: #10B981; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin: 0 auto 0.75rem;">
+              ✓
+            </div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">Appointment Successfully Confirmed!</h3>
+            <p class="text-muted" style="font-size: 0.9rem;">
+              A confirmation voucher and SMS reminder have been generated. Present this pass at our clinic reception.
+            </p>
+          </div>
+
+          <!-- Digital Pass Card -->
+          <div class="appointment-pass" id="digitalAppointmentPass">
+            <div class="pass-header">
+              <div>
+                <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #38BDF8;">Ngary Clinic Admission Pass</span>
+                <h4 style="color: #FFFFFF; font-size: 1.2rem;">Official Clinic Consultation Pass</h4>
+              </div>
+              <div class="pass-code" id="passAppointmentId">#NG-88429</div>
+            </div>
+
+            <div class="pass-details-grid">
+              <div class="pass-field">
+                <label>Patient</label>
+                <span id="passPatientName">Kwame Mensah</span>
+              </div>
+              <div class="pass-field">
+                <label>Assigned Physician</label>
+                <span id="passDoctorName">Dr. Ngary, MD</span>
+              </div>
+              <div class="pass-field">
+                <label>Date & Time Slot</label>
+                <span id="passDateTime">Today • 2:30 PM</span>
+              </div>
+              <div class="pass-field">
+                <label>Clinic Suite</label>
+                <span id="passRoom">Suite 101 - Primary Care Suite</span>
+              </div>
+              <div class="pass-field">
+                <label>Department</label>
+                <span id="passSpecialty">General & Family Medicine</span>
+              </div>
+              <div class="pass-field">
+                <label>Insurance Status</label>
+                <span id="passInsurance">National Scheme (In-Network)</span>
+              </div>
+            </div>
+
+            <div class="pass-qr-strip">
+              <div>
+                <strong style="display: block; font-size: 0.85rem; color: #FFFFFF;">Fast Reception Check-in QR</strong>
+                <span style="font-size: 0.75rem; color: #94A3B8;">Present to the reception coordinator upon arrival</span>
+              </div>
+              <!-- High Contrast Clean SVG QR Code Representation -->
+              <svg width="60" height="60" viewBox="0 0 100 100" fill="white">
+                <rect width="100" height="100" fill="#0A192F"/>
+                <!-- Corner 1 -->
+                <rect x="10" y="10" width="30" height="30" fill="white"/>
+                <rect x="16" y="16" width="18" height="18" fill="#0A192F"/>
+                <rect x="20" y="20" width="10" height="10" fill="#0D9488"/>
+                <!-- Corner 2 -->
+                <rect x="60" y="10" width="30" height="30" fill="white"/>
+                <rect x="66" y="16" width="18" height="18" fill="#0A192F"/>
+                <rect x="70" y="20" width="10" height="10" fill="#0D9488"/>
+                <!-- Corner 3 -->
+                <rect x="10" y="60" width="30" height="30" fill="white"/>
+                <rect x="16" y="66" width="18" height="18" fill="#0A192F"/>
+                <rect x="20" y="70" width="10" height="10" fill="#0D9488"/>
+                <!-- Data blocks -->
+                <rect x="46" y="12" width="8" height="8" fill="white"/>
+                <rect x="46" y="26" width="8" height="8" fill="white"/>
+                <rect x="46" y="46" width="8" height="8" fill="#10B981"/>
+                <rect x="62" y="46" width="8" height="8" fill="white"/>
+                <rect x="76" y="62" width="12" height="12" fill="white"/>
+                <rect x="60" y="78" width="12" height="12" fill="white"/>
+              </svg>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
+            <button class="btn btn-outline" id="downloadIcsBtn">
+              📅 Download Calendar Invite (.ics)
+            </button>
+            <button class="btn btn-outline" id="printPassBtn">
+              🖨️ Print / Save Pass
+            </button>
+            <button class="btn btn-primary" onclick="ClinicBooking.closeBookingModal(); ClinicPortal.openPortal();">
+              Open Patient Portal →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Doctor Bio & Credentials Modal -->
+  <div class="modal-overlay" id="doctorModalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalDoctorName">
+    <div class="modal-dialog" style="max-width: 680px;">
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 0.75rem; font-weight: 700; color: #0D9488; text-transform: uppercase;">Medical Staff Profile</span>
+          <h3 id="modalDoctorName">Dr. Ngary, MD</h3>
+        </div>
+        <button class="modal-close-btn" id="closeDoctorModalBtn" aria-label="Close Doctor Modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div style="display: flex; gap: 1.5rem; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap;">
+          <img src="assets/images/dr_ngary_chief_portrait.jpg" alt="Doctor" id="modalDoctorImg" style="width: 120px; height: 120px; border-radius: var(--radius-md); object-fit: cover; border: 3px solid #0D9488;">
+          <div>
+            <h4 id="modalDoctorTitle" style="font-size: 1.25rem; margin-bottom: 0.25rem;">Chief Medical Officer & Founder</h4>
+            <p id="modalDoctorCredentials" class="text-muted" style="font-size: 0.9rem; margin-bottom: 0.35rem;">MD, Chief Physician • Specialist in Family Medicine</p>
+            <p id="modalDoctorRating" style="font-size: 0.85rem; font-weight: 700; color: #0D9488;">⭐ 4.99 (840 reviews)</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
+              Experience: <strong id="modalDoctorExperience">15+ Years</strong> • Languages: <strong id="modalDoctorLanguages">English, French, Wolof</strong>
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Clinical Biography</h4>
+          <p id="modalDoctorBio" style="font-size: 0.925rem; line-height: 1.6; color: var(--text-muted);"></p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Qualifications & Fellowships</h4>
+          <ul id="modalDoctorEducation" style="font-size: 0.875rem; color: var(--text-muted); padding-left: 1.25rem; line-height: 1.6;"></ul>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+          <button class="btn btn-primary" id="modalDoctorBookBtn">Book Appointment with Doctor</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Patient Portal Simulation Modal -->
+  <div class="modal-overlay" id="portalModalOverlay" role="dialog" aria-modal="true" aria-labelledby="portalTitle">
+    <div class="modal-dialog" style="max-width: 820px;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #0D9488, #10B981); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem;">
+            KM
+          </div>
+          <div>
+            <h3 id="portalTitle" style="font-size: 1.2rem; margin-bottom: 0.15rem;">Ngary Patient Health Portal</h3>
+            <p class="text-muted" style="font-size: 0.775rem;">
+              Patient: <strong>Kwame Mensah</strong> • Patient ID: <code>#NG-84920</code> • Primary Physician: <strong>Dr. Ngary, MD</strong>
+            </p>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="closePortalModalBtn" aria-label="Close Portal Modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Portal Tabs -->
+        <div class="portal-tabs">
+          <button class="portal-tab-btn active" data-tab="appointments">📅 Appointments</button>
+          <button class="portal-tab-btn" data-tab="labs">🧪 Lab & Blood Test Results</button>
+          <button class="portal-tab-btn" data-tab="prescriptions">💊 Prescriptions & Dispensary</button>
+          <button class="portal-tab-btn" data-tab="messaging">💬 Care Coordinator Chat</button>
+        </div>
+
+        <!-- Tab 1: Appointments -->
+        <div class="portal-tab-content" id="tab-appointments">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <h4 style="font-size: 1.1rem;">Your Scheduled Clinic Visits</h4>
+            <button class="btn btn-sm btn-primary" onclick="ClinicPortal.closePortal(); ClinicBooking.openBookingModal();">
+              + Book New Visit
+            </button>
+          </div>
+          <div id="portalAppointmentsList" style="display: flex; flex-direction: column; gap: 1rem;">
+            <!-- Populated by clinic-portal.js -->
+          </div>
+        </div>
+
+        <!-- Tab 2: Lab Results -->
+        <div class="portal-tab-content" id="tab-labs" style="display: none;">
+          <div style="margin-bottom: 1rem;">
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Recent Diagnostic Reports</h4>
+            <p class="text-muted" style="font-size: 0.85rem;">Verified by Dr. Emmanuel Diallo • Clinical Pathology Unit</p>
+          </div>
+          <div id="portalLabList">
+            <!-- Populated by clinic-portal.js -->
+          </div>
+        </div>
+
+        <!-- Tab 3: Prescriptions -->
+        <div class="portal-tab-content" id="tab-prescriptions" style="display: none;">
+          <div style="margin-bottom: 1.25rem;">
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Active Medications & Refill Requests</h4>
+            <p class="text-muted" style="font-size: 0.85rem;">Request 1-click refill at our on-site clinic dispensary.</p>
+          </div>
+          <div id="portalPrescriptionsList" style="display: flex; flex-direction: column; gap: 1rem;">
+            <!-- Populated by clinic-portal.js -->
+          </div>
+        </div>
+
+        <!-- Tab 4: Messaging -->
+        <div class="portal-tab-content" id="tab-messaging" style="display: none;">
+          <div style="background-color: var(--bg-card-subtle); border-radius: var(--radius-md); border: 1px solid var(--border-subtle); height: 320px; display: flex; flex-direction: column;">
+            <div id="portalChatMessages" style="flex-grow: 1; padding: 1.25rem; overflow-y: auto; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div class="chat-bubble chat-bubble-clinic">
+                <p>Hello Kwame! This is Officer Kwesi from Ngary Clinic Care Coordination. How is your recovery progressing today? Dr. Ngary's team is here to support you.</p>
+                <span class="chat-time">Today, 9:00 AM</span>
+              </div>
+            </div>
+            <form id="portalChatForm" style="display: flex; padding: 0.75rem; border-top: 1px solid var(--border-subtle); gap: 0.5rem;">
+              <input type="text" id="portalChatInput" class="input-field" placeholder="Type a message to Dr. Ngary's care team..." style="flex-grow: 1;">
+              <button type="submit" class="btn btn-sm btn-primary">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/clinic-data.js"></script>
+  <script src="js/clinic-booking.js"></script>
+  <script src="js/clinic-portal.js"></script>
+  <script src="js/clinic-app.js"></script>
+</body>
+</html>
