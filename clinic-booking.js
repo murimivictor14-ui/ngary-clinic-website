@@ -2,7 +2,7 @@
  * MAKINI MEDICAL CENTER - Interactive Multi-Step Appointment Booking System
  */
 
-const ClinicBooking = (function() {
+var ClinicBooking = window.ClinicBooking = (function() {
   // Booking state
   let currentStep = 1;
   const bookingData = {
@@ -472,30 +472,42 @@ const ClinicBooking = (function() {
   };
 })();
 
-// Attach to window object explicitly
-window.ClinicBooking = ClinicBooking;
-
-// Automatically initialize on load
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => ClinicBooking.init());
-} else {
-  ClinicBooking.init();
+// Explicitly attach to window object
+if (typeof window !== "undefined") {
+  window.ClinicBooking = ClinicBooking;
 }
 
-// Global bulletproof click delegation for any [data-open-booking] element anywhere on the page
-document.addEventListener("click", function(e) {
-  const btn = e.target.closest("[data-open-booking]");
-  if (btn) {
-    e.preventDefault();
-    const deptId = btn.getAttribute("data-department-id") || "";
-    const doctorId = btn.getAttribute("data-doctor-id") || "";
-    ClinicBooking.openBookingModal(deptId, doctorId);
+// Automatically initialize on DOM ready
+if (typeof document !== "undefined") {
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.ClinicBooking && typeof window.ClinicBooking.init === "function") {
+        window.ClinicBooking.init();
+      }
+    });
+  } else {
+    if (window.ClinicBooking && typeof window.ClinicBooking.init === "function") {
+      window.ClinicBooking.init();
+    }
   }
-});
 
-// Escape key to close booking modal
-document.addEventListener("keydown", function(e) {
-  if (e.key === "Escape") {
-    ClinicBooking.closeBookingModal();
-  }
-});
+  // Global bulletproof click delegation for any [data-open-booking] element anywhere on the page
+  document.addEventListener("click", function(e) {
+    const btn = e.target.closest("[data-open-booking]");
+    if (btn) {
+      e.preventDefault();
+      const deptId = btn.getAttribute("data-department-id") || "";
+      const doctorId = btn.getAttribute("data-doctor-id") || "";
+      if (window.ClinicBooking && typeof window.ClinicBooking.openBookingModal === "function") {
+        window.ClinicBooking.openBookingModal(deptId, doctorId);
+      }
+    }
+  });
+
+  // Escape key to close booking modal
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape" && window.ClinicBooking && typeof window.ClinicBooking.closeBookingModal === "function") {
+      window.ClinicBooking.closeBookingModal();
+    }
+  });
+}

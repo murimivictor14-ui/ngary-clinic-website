@@ -84,8 +84,12 @@ document.addEventListener("DOMContentLoaded", function() {
   initDoctorPhotoToggle();
 
   // Initialize Submodules
-  if (window.ClinicBooking) ClinicBooking.init();
-  if (window.ClinicPortal) ClinicPortal.init();
+  if (window.ClinicBooking && typeof window.ClinicBooking.init === "function") {
+    window.ClinicBooking.init();
+  }
+  if (window.ClinicPortal && typeof window.ClinicPortal.init === "function") {
+    window.ClinicPortal.init();
+  }
 });
 
 // Theme Management (Light / Dark)
@@ -182,7 +186,7 @@ function displaySymptomTriageResult(item) {
         <h4 style="font-size: 1.1rem; margin: 0.15rem 0;">${doc.name}</h4>
         <p class="text-muted" style="font-size: 0.825rem;">${doc.title} • ⭐ ${doc.rating}</p>
       </div>
-      <button class="btn btn-sm btn-primary" onclick="ClinicBooking.openBookingModal('${doc.departmentId}', '${doc.id}')">
+      <button class="btn btn-sm btn-primary" onclick="if (window.ClinicBooking) window.ClinicBooking.openBookingModal('${doc.departmentId}', '${doc.id}');">
         Book with ${doc.name.split(" ")[1]}
       </button>
     </div>
@@ -266,7 +270,9 @@ function initDoctorModals() {
           overlay.classList.remove("active");
           overlay.style.display = "none";
           document.body.style.overflow = "";
-          ClinicBooking.openBookingModal(doc.departmentId, doc.id);
+          if (window.ClinicBooking && typeof window.ClinicBooking.openBookingModal === "function") {
+            window.ClinicBooking.openBookingModal(doc.departmentId, doc.id);
+          }
         };
       }
 
