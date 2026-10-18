@@ -2,7 +2,7 @@
  * MAKINI MEDICAL CENTER - Patient Portal Interactive Simulation
  */
 
-const ClinicPortal = (function() {
+var ClinicPortal = window.ClinicPortal = (function() {
   function init() {
     attachEventListeners();
     renderPortalData();

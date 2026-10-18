@@ -1333,15 +1333,11 @@
     <span class="whatsapp-btn-text">WhatsApp Us</span>
   </a>
 
-  <!-- Scripts: Support both js/ subdirectory and root folder -->
-  <script src="js/clinic-data.js"></script>
-  <script src="clinic-data.js"></script>
-  <script src="js/clinic-booking.js"></script>
-  <script src="clinic-booking.js"></script>
-  <script src="js/clinic-portal.js"></script>
-  <script src="clinic-portal.js"></script>
-  <script src="js/clinic-app.js"></script>
-  <script src="clinic-app.js"></script>
+  <!-- Scripts: Load clinic modules cleanly with fallback -->
+  <script src="clinic-data.js" onerror="this.onerror=null;this.src='js/clinic-data.js';"></script>
+  <script src="clinic-booking.js" onerror="this.onerror=null;this.src='js/clinic-booking.js';"></script>
+  <script src="clinic-portal.js" onerror="this.onerror=null;this.src='js/clinic-portal.js';"></script>
+  <script src="clinic-app.js" onerror="this.onerror=null;this.src='js/clinic-app.js';"></script>
 
   <!-- Global click handler ensuring booking modal always opens immediately -->
   <script>

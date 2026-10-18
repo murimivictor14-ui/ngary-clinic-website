@@ -3,7 +3,7 @@
  * Featuring Dr. Ngary (Chief Medical Officer & Founder) and African Medical Specialists
  */
 
-const CLINIC_DATA = {
+var CLINIC_DATA = window.CLINIC_DATA = {
   clinicInfo: {
     name: "MAKINI MEDICAL CENTER",
     shortName: "Makini Medical Center",
